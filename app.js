@@ -18,12 +18,18 @@ async function getProjects() {
 }
 
 
-
 function displayProjects(projects) {
+
+  console.log(projects);
+
   const projectsList = document.querySelector("#projects-list");
 
+  projectsList.insertAdjacentHTML(
+    "beforeend", "<h2>Projects</h2>");
+
   for (const project of projects) {
-    projectsGrid.insertAdjacentHTML(
+    console.log(projects);
+    projectsList.insertAdjacentHTML(
       "beforeend",
       /*html*/ `
       <li>
