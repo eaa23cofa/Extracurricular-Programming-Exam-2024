@@ -11,13 +11,14 @@ async function initApp() {
   displayProjectsGrid(projects);
 }
 
+//Fucntion to fetch Projects
 async function getProjects() {
   const response = await fetch("https://portfolio.faveroconsuelo.com/wp-json/wp/v2/projects?acf_format=standard");
   const data = await response.json();
   return data;
 }
 
-
+//Function to display Projects
 function displayProjects(projects) {
 
   console.log(projects);
@@ -40,6 +41,7 @@ function displayProjects(projects) {
   }  
 }
 
+//Function to display dynamic grid of fetched Projects
 function displayProjectsGrid(projects) {
   const projectsGrid = document.querySelector("#projects-grid");
 
